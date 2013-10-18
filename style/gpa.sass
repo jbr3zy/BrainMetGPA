@@ -1,0 +1,142 @@
+@import gpa-main
+
+html, body
+  margin: 0px
+  padding: 0px
+
+body
+  color: $font-color
+  background: $body-background url($body-img)
+  font: $font-stack
+
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: moz-none
+  -ms-user-select: none
+  user-select: none
+
+table
+  width: 100%
+  border-collapse: collapse
+  font-size: .875em
+
+.max-container
+  max-width: $max-width
+  margin: auto
+  position: relative
+
+.unit-container
+  background: $unit-background
+  padding: $unit-padding
+  margin: $unit-margin
+  border: $border-stack
+  border-radius: $unit-radius
+
+.cell-container
+  padding: 0px
+  & > div
+    padding: $unit-padding
+
+.block-text
+  font-weight: normal
+
+.note-text
+  font-size: .8em
+  color: $note-color
+  display: block
+
+.heading-text
+  text-align: center
+  margin: $unit-margin
+  color: $heading-color
+
+.button
+  cursor: pointer
+  position: relative
+
+.arrow
+  background: url($arrow-img) center right no-repeat
+  position: absolute
+  z-index: 999
+  height: 20px
+  width: 25px
+  top: 50%
+  right: 15px
+  margin-top: -10px
+  margin-right: -8px
+
+.toolbar-button
+  -webkit-border-image: url($toolbar-button-img) 0 6 0 13 stretch
+  -moz-border-image: url($toolbar-button-img) 0 6 0 13
+  background: $toolbar-button-background url($toolbar-button-back-img) repeat-x
+
+  position: absolute
+  overflow: hidden
+  height: 30px
+  top: -3px
+  left: 6px
+  right: auto
+
+  border-radius: 3px
+  border-width: 0 6px 0 13px
+  margin: 0
+  padding: 0 3px
+  font-size: .625em
+  line-height: 30px
+
+#home-button
+  -moz-border-image: url($home-button-img) 0 5 0 5
+  -webkit-border-image: url($home-button-img) 0 5 0 5
+  float: right
+  right: 6px
+  left: auto
+  border-width: 0 5px 0 5px
+
+#detail-button
+  border-top: $border-stack
+
+#toolbar
+  background: $toolbar-background url($toolbar-img) repeat-x
+  border-bottom: 1px solid $toolbar-bottom-border
+  border-top: 1px solid $toolbar-top-border
+
+  overflow: hidden
+  height: 23px
+  width: 100%
+  padding-top: 10px
+  padding-bottom: 10px
+
+  color: $toolbar-color
+  font-size: 1.25em
+  text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0
+  text-align: center
+  text-overflow: ellipsis
+  white-space: nowrap
+
+#content-container
+  min-height: 100%
+  padding-bottom: 12px
+
+#itemized-container
+  .no-border
+    border: 0px
+  td
+    border-bottom: $border-stack
+    padding: $table-padding
+
+#loading
+  position: fixed
+  width: 200px
+  top: 80px
+  left: 50%
+  margin-left: -100px
+  z-index: 999
+
+#ghost-town,
+#result-container,
+#questionnaire-container,
+#over-button,
+#back-button,
+#detail-container,
+#loading
+  display: none

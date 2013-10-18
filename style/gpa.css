@@ -1,0 +1,135 @@
+/* Use this SASS partial to make edits to color scheme, patterns, and gradients */
+html, body {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  color: #555555;
+  background: #c5ccd4 url("../img/pinstripes.png");
+  font: bold 12pt Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875em; }
+
+.max-container {
+  max-width: 600px;
+  margin: auto;
+  position: relative; }
+
+.unit-container {
+  background: white;
+  padding: 13px;
+  margin: 11px;
+  border: 1px solid #888888;
+  border-radius: 11px; }
+
+.cell-container {
+  padding: 0px; }
+  .cell-container > div {
+    padding: 13px; }
+
+.block-text {
+  font-weight: normal; }
+
+.note-text {
+  font-size: 0.8em;
+  color: #888888;
+  display: block; }
+
+.heading-text {
+  text-align: center;
+  margin: 11px;
+  color: #4d4d70; }
+
+.button {
+  cursor: pointer;
+  position: relative; }
+
+.arrow {
+  background: url("../img/listArrow.png") center right no-repeat;
+  position: absolute;
+  z-index: 999;
+  height: 20px;
+  width: 25px;
+  top: 50%;
+  right: 15px;
+  margin-top: -10px;
+  margin-right: -8px; }
+
+.toolbar-button {
+  -webkit-border-image: url("../img/backButtonBrdr.png") 0 6 0 13 stretch;
+  -moz-border-image: url("../img/backButtonBrdr.png") 0 6 0 13;
+  background: #4a6c9b url("../img/backButtonBack.png") repeat-x;
+  position: absolute;
+  overflow: hidden;
+  height: 30px;
+  top: -3px;
+  left: 6px;
+  right: auto;
+  border-radius: 3px;
+  border-width: 0 6px 0 13px;
+  margin: 0;
+  padding: 0 3px;
+  font-size: 0.625em;
+  line-height: 30px; }
+
+#home-button {
+  -moz-border-image: url("../img/toolButton.png") 0 5 0 5;
+  -webkit-border-image: url("../img/toolButton.png") 0 5 0 5;
+  float: right;
+  right: 6px;
+  left: auto;
+  border-width: 0 5px 0 5px; }
+
+#detail-button {
+  border-top: 1px solid #888888; }
+
+#toolbar {
+  background: #768ba7 url("../img/toolbar.png") repeat-x;
+  border-bottom: 1px solid #30363e;
+  border-top: 1px solid #6d84a2;
+  overflow: hidden;
+  height: 23px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 1.25em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+#content-container {
+  min-height: 100%;
+  padding-bottom: 12px; }
+
+#itemized-container .no-border {
+  border: 0px; }
+#itemized-container td {
+  border-bottom: 1px solid #888888;
+  padding: 10px; }
+
+#loading {
+  position: fixed;
+  width: 200px;
+  top: 80px;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 999; }
+
+#ghost-town,
+#result-container,
+#questionnaire-container,
+#over-button,
+#back-button,
+#detail-container,
+#loading {
+  display: none; }

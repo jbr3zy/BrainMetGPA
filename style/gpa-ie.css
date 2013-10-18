@@ -1,0 +1,10 @@
+/* Use this SASS partial to make edits to color scheme, patterns, and gradients */
+.toolbar-button {
+  border-radius: 5px;
+  border-width: 0 1px 0 1px;
+  border: 1px solid #30363e;
+  border-top: none;
+  border-bottom: none; }
+
+#home-button {
+  border-width: 0 1px 0 1px; }

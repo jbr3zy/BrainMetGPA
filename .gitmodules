@@ -1,0 +1,4 @@
+[submodule "lib/add2home"]
+	path = lib/add2home
+	url = git://github.com/cubiq/add-to-homescreen.git
+	ignore = dirty
