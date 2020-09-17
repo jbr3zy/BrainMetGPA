@@ -1,156 +1,166 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <title>GPA Index</title>
-    <meta name="description" content="BrainMetGPA: The GPA mobile app is a tool that helps 
-                             provide a diagnosis-specific estimate of survival for patients 
-                             with brain metastases. Actual outcomes for individual patients 
-                             can vary widely." />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="apple-touch-icon" href="img/GPAicon.png" />
-    <link href="style/gpa.css" rel="stylesheet" media="screen" />
-    <link href="lib/add2home/style/add2home.css" rel="stylesheet" />
-    <!--[if IE]>
-        <link rel="stylesheet" type="text/css" href="gpa-ie.css" />
-    <![endif]-->
-    <script type="text/javascript">
-      var addToHomeConfig = {
-        animationIn: 'drop',
-        animationOut: 'drop',
-        lifespan:12000,
-        expire:10080,
-        touchIcon:true,
-      };
-    </script>
-    <script src="lib/add2home/src/add2home.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>GPA Index</title>
+        <meta name="description" content="BrainMetGPA: The GPA mobile app is a tool that helps provide a diagnosis-specific estimate of survival for patients with brain metastases. Actual outcomes for individual patients can vary widely." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="apple-touch-icon" href="GPAicon.png"/>
+        <link href="/gpa.css?v=2.0" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="/add2home.css">
+        <script type="text/javascript">
+          var addToHomeConfig = {
+            animationIn: 'drop',
+            animationOut: 'drop',
+            lifespan:12000,
+            expire:10080,
+            touchIcon:true,
+          };
+        </script>
+        <script type="application/javascript" src="/add2home.js"></script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-43403756-1', 'brainmetgpa.com');
-      ga('send', 'pageview');
-    </script>
-    <script src="lib/jquery/jquery.1.10.2.min.js"></script>
-    <script src="lib/gpa.js"></script>
-  </head>
-  <body>
-    <div id="content-container">
-      <img id="loading" src="img/loading.gif" />
-      <div id="ghost-town">
-        <div id="choice-template" class="button unit-container choice" data-value="0">
-          <div class="arrow"></div>
+  ga('create', 'UA-43403756-1', 'brainmetgpa.com');
+  ga('send', 'pageview');
+        </script>
+        <script src="/jquery.min.js"></script>
+        <script src="/gpa-5.js"></script>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="content-container">
+            <img id="loading" src="/loading.gif" />
+            <div id="ghost-town">
+                <div id="choice-template" class="button choice" data-value="0">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div id="toolbar">
+                <div class="max-container">
+                <div id="back-button" class="button toolbar-button">
+                    Back
+                </div>
+                <div id="over-button" class="button toolbar-button">
+                    Start over
+                </div>
+                <div id="home-button" class="button toolbar-button">
+                    Home
+                </div>
+                GPA Index
+                </div>
+            </div>
+            <div id="shell" class="max-container strip">
+            <div id="inner-shell">
+            <div id="welcome-container">
+                <div id="intro-container">
+                    <div class="heading">
+                        <p>Welcome!</p>
+                    </div>
+                    <div id="start-button" class="button">
+                        <div class="arrow"></div>
+                        Start
+                    </div>
+                    <div id="about-intro" class="note-container no-padding">
+                        <div id="about-title" class="normal-padding">
+                            About
+                        </div>
+                        <div class="normal-padding">
+                            The Graded Prognostic Assessment (GPA) estimates survival for patients with brain metastases. Survival and the factors that predict survival vary by diagnosis and the molecular profile of the patient&apos;s tumor.
+                        </div>
+                        <div id="detail-button" class="button">
+                            <div class="arrow"></div>
+                            Read more...
+                        </div>
+                    </div>
+                </div>
+                <div id="detail-container">
+                    <div class="note-container">
+                        <p>The Graded Prognostic Assessment (GPA) estimates survival for patients with brain metastases. Survival and the factors that predict survival vary by diagnosis and the molecular profile of the patient&apos;s tumor.</p>
+
+                        <p>These indices have been developed and updated over the past decade. The results have been published in peer-reviewed medical journals and independently validated. The GPA will help patients and their doctors select appropriate treatment and is also used to stratify clinical trials.</p>
+
+                        <p>References:</p>
+
+                        <p>1. Sperduto PW, Deegan BJ, Li J, et al. Prognostic Factors in Patients with Renal Cell Carcinoma and Brain Metastases. Int J Radiat Onc Biol Phys 2017;99(2S):S169.</p>
+
+                        <p>2. Sperduto PW, Jiang W, Brown PD, et al. Estimating Survival in Melanoma Patients with Brain Metastases: An Update of the Graded Prognostic Assessment for Melanoma Using Molecular Markers (Melanoma-molGPA). Int J Radiat Onc Biol Phys 2017, on-line 10/17/17, print issue 11/15/17.</p>
+
+                        <p>3. Sperduto PW, Jiang W, Brown PD, et al. The Prognostic Value of BRAF, cKIT and NRAS Mutations in Melanoma Patients with Brain Metastases. Int J Radiat Oncol Biol Phys 2017;98(5):1069-1077.</p>
+
+                        <p>4. Sperduto PW, Yang TJ, Beal K, et al. Estimating Survival in Patients with Lung Cancer and Brain Metastases: An Update of the Graded Prognostic Assessment for Lung Cancer using Molecular Markers (Lung-molGPA). JAMA Oncology, published online Nov 17, 2016; doi: 10.1001/jamaoncol.2016.3834</p>
+
+                        <p>5. Sperduto PW, Yang TJ, Beal K, et al. The Effect of Gene Alterations and Tyrosine Kinase Inhibition on Survival and Cause of Death in Patients with Adenocarcinoma of the Lung and Brain Metastases. Int J Radiat Oncol Biol Phys 2016;96(2):406-413.</p>
+
+                        <p>6. Sperduto PW, Kased N, Roberge D, et al. Effect of tumor subtype on survival and the Graded Prognostic Assessment for patients with breast cancer and brain metastases. Int J Radiat Oncol Biol Phys 2012;82(5):2111-2117.</p>
+
+                        <p>7. Sperduto PW, Kased N, Roberge D, et al. Summary report on the Graded Prognostic Assessment (GPA): an accurate and facile diagnosis-specific tool to estimate survival, guide treatment and stratify clinical trials for patients with brain metastases. J Clin Onc, 30:419-425, 2012.</p>
+
+                        <p>8. Sperduto PW, Kased N, Roberge D, et al. The Graded Prognostic Assessment (GPA): A new diagnosis-specific prognostic index for women with breast cancer and brain metastases. Int J Radiat Oncol Biol Phys, 82(5):2111-17, 2012.</p>
+
+                        <p>9. Sperduto PW, Chao ST, Sneed P, et al. Diagnosis-specific prognostic factors, indices and treatment outcomes for patients with newly-diagnosed brain metastases: a multi-institutional analysis of 4259 patients. Int J Radiat Oncol Biol Phys, 77(3);655-661, 2010.</p>
+
+                        <p>10. Sperduto PW, Berkey B, Gaspar LE, Mehta M, Curran WJ. A new prognostic index and comparison to three other indices for patients with brain metastases: An analysis of 1960 patients in the RTOG database. Int J Radiat Oncol Biol Phys 70:510-514, 2008.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="result-container">
+                <div class="heading">
+                    The estimated MST
+                    (median survival time)
+                    from the time of initial treatment
+                    of the brain metastases is:
+                </div>
+                <div class="note-container">
+                    <b><span id="result">0</span> months</b><br />
+                    <span class="note big-note">
+                        25<sup>th</sup>-75<sup>th</sup> percentile range:
+                        <b><span id="range">0 - 0</span> months</b>
+                    </span>
+                </div>
+                <div class="heading">
+                    Based on the following selected factors:
+                </div>
+                <div class="note-container no-padding">
+                    <table id="itemized-container">
+                    </table>
+                </div>
+            </div>
+            <div id="questionnaire-container">
+                <div id="question-container" class="heading">
+                    From which of the following diagnoses does your patient have brain metastases?
+                </div>
+                <div id="choice-container">
+                    <div class="button choice">
+                        <div class="arrow"></div>
+                        Lung Cancer
+                        <span class="note">Non-Small Cell and Small Cell</span>
+                    </div>
+                    <div class="button choice" data-value="1">
+                        <div class="arrow"></div>
+                        Melanoma
+                    </div>
+                    <div class="button choice" data-value="2">
+                        <div class="arrow"></div>
+                        Breast Cancer
+                    </div>
+                    <div class="button choice" data-value="3">
+                        <div class="arrow"></div>
+                        Renal Cell Carcinoma
+                    </div>
+                    <div class="button choice" data-value="4">
+                        <div class="arrow"></div>
+                        Gastro-intestinal Cancer
+                        <span class="note">Any site</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
         </div>
-      </div>
-      <div id="toolbar">
-        <div class="max-container">
-          <div id="back-button" class="button toolbar-button">
-            Back
-          </div>
-          <div id="over-button" class="button toolbar-button">
-            Start over
-          </div>
-          <div id="home-button" class="button toolbar-button">
-            Home
-          </div>
-          GPA Index
-        </div>
-      </div>
-      <div class="max-container">
-        <div id="welcome-container">
-          <div id="intro-container">
-            <div class="heading-text">
-              <p>Welcome!</p>
-            </div>
-            <div id="start-button" class="button unit-container">
-              <div class="arrow"></div>
-              Start
-            </div>
-            <div class="unit-container cell-container">
-              <div id="about-title" class="">
-                About
-  
-              </div>
-              <div class="block-text">
-                The Graded Prognostic Assessment (GPA) mobile app is a tool that helps 
-                provide a diagnosis-specific estimate of survival for patients with 
-                brain metastases.
-              </div>
-              <div id="detail-button" class="button">
-                <div class="arrow"></div>
-                Read more...
-              </div>
-            </div>
-          </div>
-          <div id="detail-container">
-            <div class="unit-container block-text">
-                <p>The Graded Prognostic Assessment (GPA) estimates survival for patients with brain 
-                metastases. <b>Actual outcomes for individual patients can vary widely.</b></p>
-  
-                <p>Survival and the factors that predict survival vary by diagnosis.
-                Patient care should be individualized based on the patient's prognosis.</p>
-  
-                <p>These indices have been developed based on the experience of 11 institutions with 3940 
-                patients (Sperduto et al, Journal of Clinical Oncology 2012:30;419-425).</p>
-  
-                <p>The GPA has been independently validated by numerous publications from around the world 
-                and is now used to stratify clinical trials.</p>
-            </div>
-          </div>
-        </div>
-        <div id="result-container">
-          <div class="heading-text">
-            The estimated MST (median survival time) from the time of 
-            initial treatment of the brain metastases is:
-          </div>
-          <div class="unit-container">
-            <b><span id="result">0</span> months</b><br />
-            <span class="note-text">
-              25<sup>th</sup>-75<sup>th</sup> percentile range: 
-              <b><span id="range">0 - 0</span> months</b>
-            </span>
-          </div>
-          <div class="heading-text">
-            Based on the following selected factors:
-          </div>
-          <div class="unit-container cell-container">
-            <table id="itemized-container">
-            </table>
-          </div>
-        </div>
-        <div id="questionnaire-container">
-          <div id="question-container" class="heading-text">
-            From which of the following diagnoses does your patient have brain metastases?
-          </div>
-          <div id="choice-container">
-            <div class="button unit-container choice" data-value="0">
-              <div class="arrow"></div>
-              Lung Cancer
-              <span class="note-text">Non-Small Cell and Small Cell</span>
-            </div>
-            <div class="button unit-container choice" data-value="1">
-              <div class="arrow"></div>
-              Melanoma
-            </div>
-            <div class="button unit-container choice" data-value="2">
-              <div class="arrow"></div>
-              Breast Cancer
-            </div>
-            <div class="button unit-container choice" data-value="3">
-              <div class="arrow"></div>
-              Renal Cell Carcinoma
-            </div>
-            <div class="button unit-container choice" data-value="4">
-              <div class="arrow"></div>
-              Gastro-intestinal Cancer
-              <span class="note-text">Any site</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
