@@ -2,13 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>GPA Index</title>
-        <meta name="description" content="BrainMetGPA: The GPA mobile app is a tool that helps provide a diagnosis-specific estimate of survival for patients with brain metastases. Actual outcomes for individual patients can vary widely." />
+        <meta name="description" content="BrainMetGPA: The GPA mobile app is a tool that helps
+                                 provide a diagnosis-specific estimate of survival for patients
+                                 with brain metastases. Actual outcomes for individual patients
+                                 can vary widely." />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=9" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="apple-touch-icon" href="GPAicon.png"/>
-        <link href="/gpa.css?v=2.0" rel="stylesheet" media="screen">
-        <link rel="stylesheet" href="/add2home.css">
+        <link rel="apple-touch-icon" href="img/GPAicon.png" />
+        <link href="style/gpa.css" rel="stylesheet" media="screen" />
+        <link href="lib/add2home/style/add2home.css" rel="stylesheet" />
+        <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="gpa-ie.css" />
+        <![endif]-->
         <script type="text/javascript">
           var addToHomeConfig = {
             animationIn: 'drop',
@@ -18,18 +24,18 @@
             touchIcon:true,
           };
         </script>
-        <script type="application/javascript" src="/add2home.js"></script>
+        <script src="lib/add2home/src/add2home.js"></script>
         <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-43403756-1', 'brainmetgpa.com');
-  ga('send', 'pageview');
+          ga('create', 'UA-43403756-1', 'brainmetgpa.com');
+          ga('send', 'pageview');
         </script>
-        <script src="/jquery.min.js"></script>
-        <script src="/gpa-5.js"></script>
+        <script src="lib/jquery/jquery.1.10.2.min.js"></script>
+        <script src="lib/gpa.js"></script>
     </head>
     <body>
         <div id="background"></div>
